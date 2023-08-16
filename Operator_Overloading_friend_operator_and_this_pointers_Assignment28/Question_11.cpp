@@ -17,7 +17,7 @@ class Marks{
         void printMarks(){
             cout<<"marks "<<marks<<endl;
         }
-        Marks* operator->(){
+        Marks* operator->(){ // return  pointer of an object
             return this;
         }
 };
