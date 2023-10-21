@@ -26,13 +26,13 @@ using namespace std;
                 numerator = nume;
                 denominator = denom;
             }
-            fraction operator++()
+            fraction operator++() // post increment
             {
                 numerator++;
                 denominator++;
                 return *this;
             }
-            fraction operator++(int){
+            fraction operator++(int){ // pre increment , there 'int' is used for differentiate function signature
                 fraction temp(numerator,denominator);
                 numerator++;
                 denominator++;
@@ -41,10 +41,10 @@ using namespace std;
             friend void operator<<(ostream&,fraction&);
             friend void operator>>(istream&,fraction&);
     };
-    void operator<<(ostream & cout,fraction &f){
+    void operator<<(ostream & cout,fraction &f){  //  Insertion operator
             cout<<f.numerator<<"/"<<f.denominator<<endl;
     }
-    void operator>>(istream& cin,fraction & f) {
+    void operator>>(istream& cin,fraction & f) {   //   Ectraction operator
             cout<<"numerator : ";
             cin>>f.numerator;
             cout<<"denominator : ";
